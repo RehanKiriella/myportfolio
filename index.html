@@ -48,6 +48,14 @@ section{margin-top:clamp(64px,10vw,110px)}
 .about p{margin:0;font-size:clamp(20px,2.6vw,27px);line-height:1.38;letter-spacing:-.02em;max-width:30em}
 footer{margin-top:clamp(64px,10vw,110px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--mute);font-size:15px}
 @media (max-width:640px){.sub{display:none}.proj button{grid-template-columns:1fr 28px}.about{grid-template-columns:1fr}.photo{margin-bottom:40px}}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero>.photo,.hero>h1,.hero>.pills{animation:in .7s ease-out both}
+.hero>h1{animation-delay:.08s}.hero>.pills{animation-delay:.16s}
+.proj.open .detail p{animation:in .3s ease-out both}
+.pill{transition:background-color .2s}
+h3{transition:color .2s}
+.pm::before,.pm::after{transition:transform .2s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
